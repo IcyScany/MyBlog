@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* background: white url(/image/6.png) fixed center center no-repeat; */
+  background: white fixed center center no-repeat;
+  background-size: cover;
+  background-color: rgb(244, 244, 244)
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.shadow {
+  box-shadow: rgb(0 0 0 / 19%) 0px 10px 20px, rgb(0 0 0 / 23%) 0px 6px 6px;
+}
+
+/* 文章部分 */
+.article-section {
+  flex: 1;
+  /* margin: 75px 10% 5% 10%; */
+}
+
+.article-card {
+  display: flex;
+  margin-bottom: 15px;
+  height: 215px;
+  padding: 8px 3% 5px 3%;
+  border-radius: 4px;
+  background-color: white;
+  opacity: 0.98;
+  align-items: center;
+}
+
+.article-img{
+  height: 170px;
+  width: 230px;
+  margin-right: 20px;
+  margin-left: -10px;
+  background-size:cover;
+  border-radius: 5px;
+}
+
+.article-title{
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Helvetica, sans-serif, Arial;
+  cursor: pointer;
+}
+
+.article-title:hover{
+  color: #2980b9;
+}
+
+.article-type{
+  width: fit-content;
+  padding: 1px 4px;
+  margin-top: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #ea7a6e;
+  /* background-color: rgb(255, 244, 244); */
+  border: solid 1px #ea7a6e;
+}
+
+.article-type:hover {
+  color: #34495e;
+}
+
+.article-content{
+  font-family: monospace; 
+  color: #999;
+}
+
+.article-info{
+  display: flex;
+  color: #606266;
+  font-size: 13px;
+}
+
+
+.page-button{
+  position: relative;
+  left: 0;
+}
