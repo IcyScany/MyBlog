@@ -26,33 +26,37 @@
       </tbody>
     </n-table>
 
-    <n-modal v-model:show="show_AddModel" preset="dialog" title="Dialog">
-      <template #header>
-        <div>添加分类</div>
-      </template>
-      <div>
-        <n-input v-model:value="add_Category.name" type="text" placeholder="请输入名称"></n-input>
-      </div>
-      <template #action>
+    <keep-alive>
+      <n-modal v-model:show="show_AddModel" preset="dialog" title="Dialog">
+        <template #header>
+          <div>添加分类</div>
+        </template>
         <div>
-          <n-button @click="add">提交</n-button>
+          <n-input v-model:value="add_Category.name" type="text" placeholder="请输入名称"></n-input>
         </div>
-      </template>
-    </n-modal>
+        <template #action>
+          <div>
+            <n-button @click="add">提交</n-button>
+          </div>
+        </template>
+      </n-modal>
+    </keep-alive>
 
-    <n-modal v-model:show="show_UpdateModel" preset="dialog" title="Dialog">
-      <template #header>
-        <div>修改分类</div>
-      </template>
-      <div>
-        <n-input v-model:value="update_Category.name" type="text" placeholder="请输入名称"></n-input>
-      </div>
-      <template #action>
+    <keep-alive>
+      <n-modal v-model:show="show_UpdateModel" preset="dialog" title="Dialog">
+        <template #header>
+          <div>修改分类</div>
+        </template>
         <div>
-          <n-button @click="update">提交</n-button>
+          <n-input v-model:value="update_Category.name" type="text" placeholder="请输入名称"></n-input>
         </div>
-      </template>
-    </n-modal>
+        <template #action>
+          <div>
+            <n-button @click="update">提交</n-button>
+          </div>
+        </template>
+      </n-modal>
+    </keep-alive>
   </div>
 </template>
 
