@@ -66,9 +66,10 @@ const scrollTop = () => {
   let scroll = document.documentElement.scrollTop || document.body.scrollTop;
   // 设置定时器，实现防抖优化
   setTimeout(() => {
-    let oldscroll = document.documentElement.scrollTop || document.body.scrollTop;
-    h.value = oldscroll - scroll
+    let newscroll = document.documentElement.scrollTop || document.body.scrollTop;
+    h.value = newscroll - scroll
   }, 200)
+  // 向上滚动时显示导航栏，反之隐藏
   if (h.value < 0 || scroll === 0) {
     hide.value = false
   } else {
