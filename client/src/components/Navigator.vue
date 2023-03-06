@@ -64,10 +64,11 @@ const h = ref(0)
 // 实时滚动条高度
 const scrollTop = () => {
   let scroll = document.documentElement.scrollTop || document.body.scrollTop;
+  // 设置定时器，实现防抖优化
   setTimeout(() => {
     let oldscroll = document.documentElement.scrollTop || document.body.scrollTop;
     h.value = oldscroll - scroll
-  }, 20)
+  }, 200)
   if (h.value < 0 || scroll === 0) {
     hide.value = false
   } else {
